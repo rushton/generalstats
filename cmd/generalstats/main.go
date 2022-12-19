@@ -39,6 +39,10 @@ func main() {
 	for _, data := range dataMap {
 		count := len(data)
 
+		sum, err := data.Sum()
+		if err != nil {
+			log.Fatalf("Error calculating sum: %v", err)
+		}
 		min, err := data.Min()
 		if err != nil {
 			log.Fatalf("Error calculating min: %v", err)
@@ -72,7 +76,8 @@ func main() {
 			log.Fatalf("Error calculating tp999: %v", err)
 		}
 
-		fmt.Printf(`count: %d
+		fmt.Printf(`sum: %.2f
+count: %d
 min: %.2f
 max: %.2f
 mean: %.2f
@@ -81,6 +86,6 @@ tp75: %.2f
 tp95: %.2f
 tp99: %.2f
 tp999: %.2f
-`, count, min, max, mean, median, tp75, tp95, tp99, tp999)
+`, sum, count, min, max, mean, median, tp75, tp95, tp99, tp999)
 	}
 }

@@ -8,12 +8,12 @@
 seq 10 | generalstats
 
 count:   10
-min:     1
-max:     10
-mean:    5
-median:  5
-tp75:    7
-tp95:    9
-tp99:    9
-tp999:   9
+min:     1.00
+max:     10.00
+mean:    5.50
+median:  5.50
+tp75:    7.50
+tp95:    9.50
+tp99:    9.50
+tp999:   9.50
 ```
